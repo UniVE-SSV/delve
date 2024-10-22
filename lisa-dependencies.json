@@ -1,0 +1,22 @@
+{
+  "lisaRootPkg": "it.unive.lisa",
+  "projectPath": ".",
+  "dependencies": [
+    {
+      "name": "lisa",
+      "repository": "git@github.com:lisa-analyzer/lisa.git",
+      "type": "lisaCore",
+      "branch": "lisa4ros2",
+      "antlrGeneratedSrcBuildRoot": "lisa-imp",
+      "generateGrammarSource": true
+    },
+    {
+      "name": "pylisa",
+      "repository": "git@github.com:giacomozanatta/pylisa.git",
+      "type": "frontend",
+      "branch": "master",
+      "antlrGeneratedSrcBuildRoot": ".",
+      "generateGrammarSource": true
+    }
+  ]
+}
