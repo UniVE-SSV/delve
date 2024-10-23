@@ -26,6 +26,12 @@ def get_all_src_main_folder(dependency):
                 #print(full_path.removeprefix(repo_local_path))
     return folders
 
+def generate_version_info(dependency):
+    repo_local_path = "lisa-dependencies/{}".format(dependency["name"] + "/" + dependency["name"]) # ugly part (the project stays in lisa/lisa) - but this could not be the case for all the FE.
+    print("Generating version info")
+    command = "cd {} && ./gradlew generateVersionInfo".format(repo_local_path)
+    subprocess.run(command, shell=True)
+
 def clone_dependency(dependency):
     repo_local_path = "lisa-dependencies/{}".format(dependency["name"])
     if os.path.exists(repo_local_path):
@@ -98,6 +104,10 @@ def main():
         for dependency in dependencies["dependencies"]:
             # 1. CLONE REPO (and switch branch)
             clone_dependency(dependency)
+
+            if "type" in dependency and dependency["type"] == "lisaCore":
+                # we need to call gradle to generate the version info source.
+                generate_version_info(dependency)
             # 2. PERFORM generateGrammarSource gradlew task (to compile the antlr grammars)
             #generate_grammar_source(dependency) # no needed (we generated all the necessary files from the delve gradle
             # 3. Symlinks of all the libraries sources (and also add them to a .gitignore)
