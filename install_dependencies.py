@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 LISA_DEPENDENCIES_JSON_PATH = "lisa-dependencies.json"
 import json
 from git import Repo
