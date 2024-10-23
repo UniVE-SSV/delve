@@ -11,6 +11,13 @@
       "generateGrammarSource": true
     },
     {
+      "name": "go-lisa",
+      "repository": "git@github.com:lisa-analyzer/go-lisa.git",
+      "type": "frontend",
+      "branch": "scsr2024",
+      "antlrGeneratedSrcBuildRoot": "go-lisa"
+    },
+    {
       "name": "pylisa",
       "repository": "git@github.com:giacomozanatta/pylisa.git",
       "type": "frontend",

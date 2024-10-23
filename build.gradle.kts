@@ -45,6 +45,8 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.9")
     implementation("io.github.classgraph:classgraph:4.8.175")
 
+    implementation("commons-cli:commons-cli:1.5.0")
+
     api("org.graphstream:gs-core:2.0")
 
     // time handling
