@@ -6,9 +6,8 @@
       "name": "lisa",
       "repository": "git@github.com:lisa-analyzer/lisa.git",
       "type": "lisaCore",
-      "branch": "lisa4ros2",
-      "antlrGeneratedSrcBuildRoot": "lisa-imp",
-      "generateGrammarSource": true
+      "branch": "import-stmts-grammar",
+      "antlrGeneratedSrcBuildRoot": "lisa-imp"
     },
     {
       "name": "go-lisa",
@@ -22,8 +21,7 @@
       "repository": "git@github.com:giacomozanatta/pylisa.git",
       "type": "frontend",
       "branch": "master",
-      "antlrGeneratedSrcBuildRoot": ".",
-      "generateGrammarSource": true
+      "antlrGeneratedSrcBuildRoot": "."
     }
   ]
 }
