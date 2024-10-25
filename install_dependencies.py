@@ -42,10 +42,14 @@ def clone_dependency(dependency):
         shutil.rmtree(repo_local_path)
     print("Cloning repo {} in {}".format(dependency["repository"], repo_local_path))
     Repo.clone_from(dependency["repository"], repo_local_path)
-    print("Switching branch to {}".format(dependency["branch"]))
-    command = "cd {} && git checkout -b {} origin/{}".format(repo_local_path, dependency["branch"], dependency["branch"])
-    print(command)
-    subprocess.run(command, shell=True)
+    if "branch" in dependency:
+        if dependency["branch"].startswith("tags/"):
+            print("Checkout tag {}".format(dependency["branch"]))
+            command = "cd {} && git checkout {}".format(repo_local_path, dependency["branch"])
+        else:
+            print("Switching branch to {}".format(dependency["branch"]))
+            command = "cd {} && git checkout -b {} origin/{}".format(repo_local_path, dependency["branch"], dependency["branch"])
+        subprocess.run(command, shell=True)
 
 def generate_grammar_source(dependency):
     repo_local_path = "lisa-dependencies/{}".format(dependency["name"])

@@ -6,7 +6,7 @@
       "name": "lisa",
       "repository": "git@github.com:lisa-analyzer/lisa.git",
       "type": "lisaCore",
-      "branch": "import-stmts-grammar",
+      "branch": "tags/v0.1",
       "antlrGeneratedSrcBuildRoot": "lisa-imp"
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "name": "pylisa",
-      "repository": "git@github.com:giacomozanatta/pylisa.git",
+      "repository": "git@github.com:lisa-analyzer/pylisa.git",
       "type": "frontend",
       "branch": "master",
       "antlrGeneratedSrcBuildRoot": "."
