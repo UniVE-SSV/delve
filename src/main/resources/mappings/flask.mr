@@ -1,0 +1,10 @@
+flask.Flask: HTTPServer {
+
+    methods {
+            Flask() => HTTPServer()
+        }
+
+    attributes {
+
+    }
+}

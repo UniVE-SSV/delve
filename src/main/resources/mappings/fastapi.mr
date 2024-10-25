@@ -1,0 +1,6 @@
+fastapi.FastAPI: HTTPServer {
+
+    methods {
+        FastAPI() => HTTPServer()
+    }
+}
